@@ -3,7 +3,7 @@ import argparse
 def recover_jpegs(input_file_path):
     with open(input_file_path, 'rb') as file:
         data = file.read()
-
+# Jpeg signatures in raw bytes FF D8 ... FF D9
     jpeg_start = b'\xFF\xD8\xFF'
     jpeg_end = b'\xFF\xD9'
 
